@@ -1,10 +1,10 @@
-FROM ruby:2.5
+FROM ruby:2.5.8
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
-WORKDIR /mytest_heroku
-COPY Gemfile /mytest_heroku/Gemfile
-COPY Gemfile.lock /mytest_heroku/Gemfile.lock
+WORKDIR /mytest_aws
+COPY Gemfile /mytest_aws/Gemfile
+COPY Gemfile.lock /mytest_aws/Gemfile.lock
 RUN gem install bundler && bundle install
-COPY . /mytest_heroku
+COPY . /mytest_aws
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/

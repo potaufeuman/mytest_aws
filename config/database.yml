@@ -5,10 +5,6 @@
 #   gem 'sqlite3'
 #
 default: &default
-  # adapter: sqlite3
-  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  # timeout: 5000
-
   adapter: postgresql
   # adapter: mysql2
   encoding: unicode
@@ -21,7 +17,6 @@ default: &default
 
 development:
   <<: *default
-  # database: db/development.sqlite3
   database: db/development_postgres
 
 # Warning: The database defined as "test" will be erased and
@@ -29,10 +24,12 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  # database: db/test.sqlite3
   database: db/test_postgres
 
 production:
   <<: *default
-  # database: db/production.sqlite3
-  database: db/production_postgres
+  # database: db/production_postgres
+  host: <%= Rails.application.credentials.rds[:host] %>
+  database: <%= Rails.application.credentials.rds[:database] %>
+  username: <%= Rails.application.credentials.rds[:username] %>
+  password: <%= Rails.application.credentials.rds[:password] %>

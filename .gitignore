@@ -35,5 +35,10 @@ app/assets/stylesheets/application.scss
 /public/uploads
 /heroku
 
+# 機密情報
+/config/secrets.yml
+
 # 昔のファイルのバックアップ
 /shelter
+# Ignore master key for decrypting credentials and more.
+/config/master.key
