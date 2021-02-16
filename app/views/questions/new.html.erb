@@ -3,8 +3,8 @@
 <div class="row">
   <%= render 'create_question', user: @user, test: @test, question: @question %>
   <% if @user.tests.any? %>
-    <div class = "menu">
-      <div class="col-md-7 white_block">
+    <div class = "col-md-7">
+      <div class="white_block">
         <div align="center">
           <h4><%= t :分野 %>：<%= @test.subject %></h4>
           <h4><%= t :タイトル %>：<%= @test.title %></h4>
