@@ -1,5 +1,5 @@
 「MyTest」について
-<a href="https://mytest-2021.herokuapp.com/?locale=ja">https://mytest-2021.herokuapp.com/?locale=ja</a>
+<a href="https://www.mytest-2021.tk/">https://www.mytest-2021.tk/</a>
 
 説明
 このWebアプリケーションは、オンライン上で選択式のテストを作成し、他の人がそのテストを受講できるようにするためのものです。
@@ -15,11 +15,10 @@
 開発環境
 ・Mac
 ・Docker
-・AWS(S3)
+・AWS(S3, デプロイ)
 ・Ruby on Rails
-  (Ruby 2.6.3)
-  (Rails 5.1.6)
+  (Ruby 2.5.8)
+  (Rails 5.2.0)
 ・postgreSQL
 ・Bootstrap
 ・Rspec
-・Heroku
