@@ -2,13 +2,11 @@ version: '3'
 services:
   db:
     image: postgres
-    # image: mysql
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
-      # - ./tmp/db:/var/lib/myql/data
     environment:
       POSTGRES_PASSWORD: password
-      # MYSQL_PASSWORD: password
+    restart: always
   web:
     build: .
       # context: .
@@ -16,11 +14,11 @@ services:
     ports:
       - 3000:3000
       - 80:3000
-    # command: bundle exec rails s -p 3000 -b 0.0.0.0
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - ./:/web
     depends_on:
       - db
-    # stdin_open: true
-    # tty: true
+    stdin_open: true
+    tty: true
+    restart: always

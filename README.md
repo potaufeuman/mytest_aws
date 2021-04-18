@@ -18,7 +18,7 @@
 ・AWS(S3, デプロイ)
 ・Ruby on Rails
   (Ruby 2.5.8)
-  (Rails 5.2.0)
+  (Rails 5.2.5)
 ・postgreSQL
 ・Bootstrap
 ・Rspec
