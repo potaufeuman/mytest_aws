@@ -10,7 +10,7 @@ RUN rm -f /etc/nginx/sites-enabled/default && \
 
 # Rails App
 WORKDIR /mytest_aws
-# ENV RAILS_ENV="production"
+ENV RAILS_ENV="production"
 COPY Gemfile /mytest_aws/Gemfile
 COPY Gemfile.lock /mytest_aws/Gemfile.lock
 RUN gem install bundler && bundle install
@@ -25,6 +25,7 @@ EXPOSE 3000
 EXPOSE 80
 
 # Start the main process.
-CMD bundle exec puma -d && \
+# CMD bundle exec puma -d && \
+#     /usr/sbin/nginx -g 'daemon off;' -c /etc/nginx/nginx.conf
+CMD ["rails", "server", "-b", "0.0.0.0", "-e", "production"] && \
     /usr/sbin/nginx -g 'daemon off;' -c /etc/nginx/nginx.conf
-# CMD ["rails", "server", "-b", "0.0.0.0"]
