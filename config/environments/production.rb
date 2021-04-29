@@ -26,8 +26,8 @@ Rails.application.configure do
   config.public_file_server.enabled = true
 
   # Compress JavaScripts and CSS.
-  # config.assets.js_compressor = :uglifier #unicorn導入時にコメントアウト
-  # config.assets.css_compressor = :sass
+  config.assets.js_compressor = :uglifier #unicorn導入時にコメントアウト
+  config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
