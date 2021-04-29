@@ -45,3 +45,10 @@ app/assets/stylesheets/application.scss
 
 # 環境変数
 .env
+/etc
+
+# 暗号、証明書
+*.pem
+server.crt
+server.csr
+server.key
