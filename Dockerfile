@@ -24,6 +24,9 @@ ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
 EXPOSE 80
 
+# 開発環境
+# CMD ["rails", "server", "-b", "0.0.0.0"]
+
 # Start the main process.ローカルからhttpsアクセスする場合。
 # CMD bundle exec pumactl start && \
 #     /usr/sbin/nginx -g 'daemon off;' -c /etc/nginx/nginx.conf
