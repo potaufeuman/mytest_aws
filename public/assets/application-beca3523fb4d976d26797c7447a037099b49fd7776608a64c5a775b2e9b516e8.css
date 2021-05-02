@@ -1,0 +1,553 @@
+@charset "UTF-8";
+/* line 4, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+* {
+  font-family: "メイリオ", "Meiryo", "Helvetica Neue", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS P Gothic", "Osaka", "Helvetica", "Arial", "Verdana", sans-serif;
+}
+
+/* mixins, variables, etc. */
+/* line 10, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.space {
+  margin-top: 50px;
+}
+
+/* line 14, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.space-pad-10 {
+  padding-top: 10px;
+}
+
+/* line 18, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.space-bottom-20 {
+  margin-bottom: 20px;
+}
+
+/* miscellaneous */
+/* line 31, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* universal */
+/* line 41, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+body {
+  background: #e1e5e7 !important;
+}
+
+/* line 45, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+section {
+  overflow: auto;
+}
+
+/* line 49, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 53, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.center {
+  text-align: center;
+}
+/* line 55, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* line 60, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.silent_blue {
+  background-color: #e1e5e7;
+}
+
+/* line 64, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.white {
+  background: white;
+  padding: 50px;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 10px 10px 10px 10px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
+}
+
+/* line 73, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.white_narrow {
+  background: white;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
+}
+
+/* typography */
+/* line 82, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+/* header */
+/* line 87, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+/* line 96, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+#logo {
+  float: left;
+  margin-right: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+/* line 105, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 111, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+#logo_black {
+  margin-right: 0px;
+  font-size: 3em;
+  color: #000;
+  letter-spacing: 1px;
+  padding: -10px;
+  font-weight: bold;
+}
+
+/* line 120, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.navbar {
+  padding: .8rem;
+}
+
+/* line 123, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.navbar-nav li {
+  padding-right: 20px;
+}
+
+/* line 126, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.nav-item .center {
+  text-align: center;
+}
+
+/* line 131, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.carousel-inner img {
+  width: 100%;
+}
+
+/* line 135, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  /* line 141, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+  .carousel-caption {
+    /* position: absolute; */
+    top: 45%;
+    /* transform: translateY(-50%); */
+  }
+}
+@media (max-width: 576px) {
+  /* line 148, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+  .carousel-caption {
+    top: 40%;
+  }
+
+  /* line 151, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+  .carousel-caption .btn {
+    font-size: 90%;
+    padding: 4px 8px;
+  }
+
+  /* line 155, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+  .carousel-indicators {
+    display: none;
+  }
+}
+/*---Firefox Bug Fix --*/
+/* line 160, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* sidebar */
+/* line 168, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.white_wall {
+  background: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  margin-left: 2%;
+  margin-right: 2%;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* line 180, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.white_block {
+  background: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  margin-left: 2%;
+  margin-right: 2%;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
+}
+
+/* line 190, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.white_belt {
+  background: #fff;
+  padding: 5px;
+  margin-bottom: 10px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
+  text-align: center;
+}
+
+/* line 198, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.menu {
+  margin-left: 50px;
+  background: #fff;
+}
+
+/* line 203, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 208, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+/* line 212, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+table {
+  background-color: #cdefff;
+}
+/* line 214, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+table:center {
+  text-align: center;
+}
+
+/* line 219, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+th {
+  padding: 15px;
+  width: 30%;
+  background-color: #337AB7;
+  color: #fff;
+}
+
+/* line 226, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+td {
+  padding: 15px;
+  width: 30%;
+  text-align: right;
+  background-color: #E1E5E7;
+}
+
+/* line 233, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.stats {
+  overflow: auto;
+  padding: 20px;
+}
+/* line 238, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.stats a {
+  float: left;
+  padding: 0 10px;
+  border-left: 1px solid #eaeaea;
+  color: gray;
+}
+/* line 243, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.stats a:first-child {
+  padding-left: 0;
+  border: 0;
+}
+/* line 247, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.stats a:hover {
+  text-decoration: none;
+  color: blue;
+}
+/* line 252, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.stats strong {
+  display: block;
+}
+
+/* line 257, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+}
+/* line 260, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.user_avatars .gravatar {
+  margin: 1px 1px;
+}
+/* line 263, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.user_avatars a {
+  padding: 0;
+}
+
+/* line 268, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.users.follow {
+  padding: 0;
+}
+
+/* forms */
+/* line 274, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 281, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+input {
+  height: auto !important;
+}
+
+/* line 285, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+#error_explanation {
+  color: red;
+}
+/* line 287, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+#error_explanation ul {
+  color: red;
+  margin: 0 0 30px 0;
+}
+
+/* line 301, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+/* line 304, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.checkbox span {
+  margin-left: 20px;
+  font-weight: normal;
+}
+
+/* line 310, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.radio_btn {
+  float: left;
+  margin-right: 50px;
+}
+
+/* line 315, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.btn_fix_top {
+  position: fixed;
+  width: 60px;
+  top: 80px;
+}
+
+/* line 321, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.btn_fix_bottom {
+  position: fixed;
+  width: 60px;
+  top: 140px;
+}
+
+/* line 327, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.quiz {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 332, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.true {
+  margin-bottom: 5px;
+  margin-left: 20px;
+  color: blue;
+  background-color: cyan;
+}
+
+/* line 339, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.false {
+  margin-bottom: 5px;
+  margin-left: 20px;
+  color: crimson;
+  background-color: lightgrey;
+}
+
+/* line 346, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.tell_right {
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+/* line 351, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.sidemenu_box {
+  width: 20px;
+  float: left;
+  margin-left: 20px;
+}
+
+/* line 357, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.right {
+  float: right;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
+/* line 363, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+/* line 368, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.actions {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-weight: normal;
+}
+
+/* line 376, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.actions_small {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-weight: normal;
+}
+
+/* Users index */
+/* line 386, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.users {
+  list-style: none;
+  margin: 0;
+}
+/* line 389, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.users li {
+  overflow: auto;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* footer */
+/* line 398, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  border-top: 1px solid #eaeaea;
+  background-color: lightgray;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
+  text-align: right;
+}
+
+/* line 409, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+footer a {
+  color: #555;
+}
+
+/* line 413, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+footer a:hover {
+  color: #222;
+}
+
+/* line 417, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+footer small {
+  float: left;
+}
+
+/* line 421, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+/* line 426, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+/* microposts */
+/* line 433, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.microposts {
+  list-style: none;
+  padding: 0;
+}
+/* line 436, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.microposts li {
+  padding: 10px 0;
+  border-top: 1px solid #e8e8e8;
+}
+/* line 440, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.microposts .user {
+  margin-top: 5em;
+  padding-top: 0;
+}
+/* line 444, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.microposts .content {
+  display: block;
+  margin-left: 60px;
+}
+/* line 447, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.microposts .content img {
+  display: block;
+  padding: 5px 0;
+}
+/* line 452, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.microposts .timestamp {
+  color: #eaeaea;
+  display: block;
+  margin-left: 60px;
+}
+/* line 457, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+.microposts .gravatar {
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+/* line 465, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+aside textarea {
+  height: 100px;
+  margin-bottom: 5px;
+}
+
+/* line 471, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+span.picture {
+  margin-top: 10px;
+}
+/* line 473, /Users/saber/Desktop/projects/mytest_aws/app/assets/stylesheets/custom.scss */
+span.picture input {
+  border: 0;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
