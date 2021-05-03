@@ -36,7 +36,8 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = 'd3h78o4vetgw40.cloudfront.net'
+  # config.action_controller.asset_host = 'd3h78o4vetgw40.cloudfront.net' # heroku利用時のcloudfront
+  config.action_controller.asset_host = 'd2gd3nu0wh4ow9.cloudfront.net' 
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
