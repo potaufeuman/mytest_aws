@@ -13,7 +13,9 @@ WORKDIR /mytest_aws
 ENV RAILS_ENV="production"
 COPY Gemfile /mytest_aws/Gemfile
 COPY Gemfile.lock /mytest_aws/Gemfile.lock
-RUN gem install bundler && bundle install
+RUN gem install bundler
+RUN bundle update will_paginate
+RUN bundle install
 COPY . /mytest_aws
 RUN mkdir /mytest_aws/tmp/sockets
 

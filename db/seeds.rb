@@ -13,3 +13,12 @@ User.create!(name:  "Sumiko",
             admin:     false,
             activated: true,
             activated_at: Time.zone.now)
+
+Test.create!(
+subject: "サンプルテスト",
+title: "テストのタイトル",
+user_id: 1,
+created_at: 202104010000,
+updated_at: 202104010000,
+tested_id: 2
+)
