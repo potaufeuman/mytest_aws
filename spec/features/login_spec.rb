@@ -10,7 +10,7 @@ RSpec.feature "Login", type: :feature do
   #   click_button "ログイン"
   #   expect(current_path).to eq root_path
   # end
-  
+
   scenario "ログインに成功すること" do
     # valid_login(user) login_supportを読み込めないと使えない。
     visit root_path
@@ -18,6 +18,6 @@ RSpec.feature "Login", type: :feature do
     fill_in "Password", with: user.password
     click_button "ログイン"
     expect(current_path).to eq user_path(user)
-    expect(page).to_not have_content "Welcome to MyTest!"
+    expect(page).not_to have_content "Welcome to MyTest!"
   end
 end

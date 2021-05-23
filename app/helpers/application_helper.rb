@@ -7,7 +7,7 @@ module ApplicationHelper
     options = params.permit!.to_h
     url_for(options)
   end
-  
+
   # ページごとの完全なタイトルを返します。
   # サブtitleがない場合、MyTest…と表示します。
   def full_title(page_title = '')

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails',        '5.2.5'
 gem 'bcrypt',       '3.1.12'
-gem 'faker'         
+gem 'faker'
 gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 gem 'will_paginate',           '3.1.7'
@@ -21,12 +21,12 @@ gem 'pg', '0.20.0'
 
 group :development, :test do
   gem 'hirb'
-  gem 'hirb-unicode'
+  # gem 'hirb-unicode' # rubocop-airbnbとunicodeバージョンでconflict
   gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri
   gem 'spring-commands-rspec'
   gem 'rails-controller-testing'
-  gem 'rubocop'
+  gem 'rubocop-airbnb', require: false
   gem 'bullet'
 end
 
@@ -46,13 +46,13 @@ group :test do
   gem 'guard-minitest',           '2.4.4'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
-  gem 'capybara' #Rails5.1以後ではもとから入っているが、一応インストール
+  gem 'capybara' # Rails5.1以後ではもとから入っているが、一応インストール
   gem 'database_cleaner'
   gem 'launchy'
   gem "selenium-webdriver"
   gem 'shoulda-matchers'
-    # git: 'https://github.com/thoughtbot/shoulda-matchers.git',
-    # branch: 'rails-5'
+  # git: 'https://github.com/thoughtbot/shoulda-matchers.git',
+  # branch: 'rails-5'
 end
 
 group :production do

@@ -7,16 +7,16 @@ class UsersController < ApplicationController
     @users = User.paginate(page: params[:page])
     @user = current_user
   end
-  
+
   def show
     @user = User.find(params[:id])
     @tests = @user.tests.paginate(page: params[:page])
   end
-  
+
   def new
     @user = User.new
   end
-  
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -31,11 +31,11 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
-  
+
   def edit
     @user = User.find(params[:id])
   end
-  
+
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
@@ -45,26 +45,27 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
-  
+
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"
     redirect_to users_url
   end
-    
+
   private
+
   # adminは絶対に操作させないこと
-    def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
-    end
-    
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
-    end
-    
-    def admin_user
-      redirect_to(root_url) unless current_user.admin?
-    end
+  def user_params
+    params.require(:user).permit(:name, :email, :password,
+                                 :password_confirmation)
+  end
+
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_url) unless current_user?(@user)
+  end
+
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
+  end
 end
