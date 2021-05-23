@@ -1,7 +1,7 @@
 describe 'POST #create' do
-  #有効なユーザーの検証
+  # 有効なユーザーの検証
   context 'valid request' do
-    #ユーザーが追加される
+    # ユーザーが追加される
     it 'adds a user' do
       expect do
         post signup_path, params: { user: attributes_for(:user) }
@@ -15,16 +15,18 @@ describe 'POST #create' do
     #   it { is_expected.to have_http_status 302 } #リダイレクト成功
     # end
   end
-  #無効なリクエスト
+  # 無効なリクエスト
+
   context 'invalid request' do
-    #無効なデータを作成
+    # 無効なデータを作成
     let(:user_params) do
       attributes_for(:user, name: '',
                             email: 'user@invalid',
                             password: '',
                             password_confirmation: '')
     end
-    #ユーザーが追加されない
+    # ユーザーが追加されない
+
     it 'does not add a user' do
       expect do
         post signup_path, params: { user: user_params }

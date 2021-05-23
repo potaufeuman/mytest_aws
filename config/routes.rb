@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
-    root "sessions#new"
-    get '/:locale'   => 'sessions#new',as:"locale" 
-    get '/' => redirect("/ja")
-    post '/',        to: 'sessions#create'
-    get 'password_resets/new'
-    get 'password_resets/edit'
-  scope ":/locale", locale:/en|ja/ do
-  # scope '(:locale)', locale: /#{I18n.available_locales.map(&:to_s).join('|')}/ do
+  root "sessions#new"
+  get '/:locale' => 'sessions#new', as: "locale"
+  get '/' => redirect("/ja")
+  post '/', to: 'sessions#create'
+  get 'password_resets/new'
+  get 'password_resets/edit'
+  scope ":/locale", locale: /en|ja/ do
+    # scope '(:locale)', locale: /#{I18n.available_locales.map(&:to_s).join('|')}/ do
     get  '/',        to: 'sessions#new'
     post '/',        to: 'sessions#create'
     get  '/help',    to: 'static_pages#help'
     get  '/about',   to: 'static_pages#about'
     get  '/privacy', to: 'static_pages#privacy'
     get  '/term',    to: 'static_pages#term'
-    get  '/language',to: 'static_pages#language'
-    get  '/search',  to: 'static_pages#search'
+    get  '/language', to: 'static_pages#language'
+    get  '/search', to: 'static_pages#search'
     get  '/searchresult', to: 'static_pages#searchresult'
     get  '/signup',  to: 'users#new'
     post '/signup',  to: 'users#create'

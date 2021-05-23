@@ -8,13 +8,13 @@ RSpec.feature "SignUps", type: :feature do
     click_link "⇨新しくユーザー登録される方はこちらへ"
 
     perform_enqueued_jobs do
-      expect {
+      expect do
         fill_in "Name",          with: "Example"
         fill_in "Email",         with: "test@example.com"
         fill_in "Password",      with: "test123"
         fill_in "Confirmation",  with: "test123"
         click_button "Create my account"
-      }.to change(User, :count).by(1)
+      end.to change(User, :count).by(1)
 
       # expect(page).to have_content "アカウント有効化メールを送信しました。"
       expect(current_path).to eq root_path

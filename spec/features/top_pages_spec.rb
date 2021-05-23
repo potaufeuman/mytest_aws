@@ -9,11 +9,11 @@ end
 
 RSpec.feature 'ログイン' do
   background do
-    User.create!(name:  "Example User",
+    User.create!(name: "Example User",
                  email: "example@fortune.org",
-                 password:              "foobar",
+                 password: "foobar",
                  password_confirmation: "foobar",
-                 admin:     false,
+                 admin: false,
                  activated: true,
                  activated_at: Time.zone.now)
   end
